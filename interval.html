@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container" align = "center" style=" margin:  50% auto;">
+        <div class="row">
+            <div class="card" align = "center">
+                <div class="box">
+                    <button onclick="start()">+</button>
+                <button  id="time" style=" background-color: bisque; color: #000; margin:0 10px;">0</button>
+                <button id="time" onclick="rev()" >-</button>
+                </div>
+                <button onclick="reset()">Reset</button> 
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       let counter = 0;
+       
+        function start(){
+            counter++;
+            document.getElementById("time").innerHTML = counter;
+        }
+        function rev(){
+            counter--;
+            document.getElementById("time").innerHTML = counter;
+        }
+        function reset(){
+            counter = 0;
+            document.getElementById("time").innerHTML = counter;
+        }
+    </script>
+</body>
+</html>
